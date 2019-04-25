@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+
+><ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="390dp"
+             android:layout_height="match_parent"
+             android:gravity="center"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             android:fillViewport="true">
+    <LinearLayout
+            android:id="@+id/centerColumn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:layout_marginTop="2dp"
+    >
+        <include layout="@layout/player_life"
+                 android:id="@+id/player1"/>
+        <include layout="@layout/player_life"
+                 android:id="@+id/player2"/>
+        <include layout="@layout/player_life"
+                 android:id="@+id/player3"/>
+        <include layout="@layout/player_life"
+                 android:id="@+id/player4"/>
+        <TextView android:id="@+id/losingLabel"
+                  android:text="Has Lost!"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:textSize="25sp"
+                  android:visibility="invisible"
+        />
+    </LinearLayout>
+</ScrollView>
+</android.support.constraint.ConstraintLayout>
